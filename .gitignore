@@ -242,3 +242,5 @@ Temporary Items
 # End of https://www.toptal.com/developers/gitignore/api/macos,intellij,java,eclipse
 .idea/misc.xml
 .idea/inspectionProfiles/Project_Default.xml
+
+target/
