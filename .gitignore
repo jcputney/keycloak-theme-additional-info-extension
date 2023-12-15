@@ -244,3 +244,6 @@ Temporary Items
 .idea/inspectionProfiles/Project_Default.xml
 
 target/
+.idea/jpa-buddy.xml
+.idea/palantir-java-format.xml
+.idea/vcs.xml
