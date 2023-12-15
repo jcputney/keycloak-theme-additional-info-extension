@@ -19,6 +19,9 @@ jobs:
         with:
           java-version: '17'
           distribution: 'corretto'
+      - name: Replace version number in pom.xml
+        run: |
+          sed -i "s/<version>1.0.0-SNAPSHOT<\/version>/<version>${{ env.GITHUB_REF }}</version>/" pom.xml
       - name: Publish package
         run: mvn --batch-mode deploy
         env:
