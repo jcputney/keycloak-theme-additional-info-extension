@@ -69,3 +69,23 @@ you could store the name of your organization in a Realm attribute and display i
     ```bash
     docker run -p 8080:8080 keycloak-theme-additional-info-extension start-dev
     ```
+
+### Dockerfile COPY Installation
+1. Create a Dockerfile with the following contents:
+    ```dockerfile
+    FROM quay.io/keycloak/keycloak:23.0
+    
+    COPY --from=ghcr.io/jcputney/keycloak-theme-additional-info-extension:latest /app/keycloak-theme-additional-info-extension.jar /opt/keycloak/providers/
+    
+    RUN /opt/keycloak/bin/kc.sh build
+    
+    ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
+    ```
+2. Build the Docker image:
+    ```bash
+    docker build -t keycloak-theme-additional-info-extension .
+    ```
+3. Run the Docker image:
+    ```bash
+    docker run -p 8080:8080 keycloak-theme-additional-info-extension start-dev
+    ```
