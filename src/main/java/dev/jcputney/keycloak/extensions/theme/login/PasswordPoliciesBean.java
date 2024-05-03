@@ -15,6 +15,7 @@ public class PasswordPoliciesBean {
 
   public PasswordPoliciesBean(PasswordPolicy policy) {
     this.length = policy.getPolicyConfig("length");
+    this.maxLength = policy.getPolicyConfig("maxLength");
     this.lowerCase = policy.getPolicyConfig("lowerCase");
     this.upperCase = policy.getPolicyConfig("upperCase");
     this.specialChars = policy.getPolicyConfig("specialChars");
@@ -27,6 +28,10 @@ public class PasswordPoliciesBean {
 
   public Integer getLength() {
     return length;
+  }
+
+  public Integer getMaxLength() {
+    return maxLength;
   }
 
   public Integer getLowerCase() {
