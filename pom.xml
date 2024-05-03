@@ -5,6 +5,10 @@
     <packaging>jar</packaging>
     <version>1.0.0-SNAPSHOT</version>
 
+    <description>Keycloak Theme Additional Info Extension - Provides additional variables to templates, specifically for use during client-side password validation</description>
+
+    <url>https://github.com/jcputney/keycloak-theme-additional-info-extension</url>
+
     <developers>
         <developer>
             <name>Jonathan Putney</name>
@@ -24,6 +28,13 @@
         <developerConnection>scm:git:git://github.com/jcputney/keycloak-theme-additional-info-extension.git</developerConnection>
         <url>https://github.com/jcputney/keycloak-theme-additional-info-extension</url>
     </scm>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
 
     <properties>
         <java.version>17</java.version>
