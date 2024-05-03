@@ -4,6 +4,7 @@ import org.keycloak.models.PasswordPolicy;
 
 public class PasswordPoliciesBean {
   private final Integer length;
+  private final Integer maxLength;
   private final Integer lowerCase;
   private final Integer upperCase;
   private final Integer specialChars;
