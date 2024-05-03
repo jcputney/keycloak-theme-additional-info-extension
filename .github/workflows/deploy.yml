@@ -31,7 +31,7 @@ jobs:
         run: mvn -B package --file pom.xml
 
       - name: Publish package to GitHub Packages
-        run: mvn deploy
+        run: mvn deploy -P github
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
@@ -41,14 +41,14 @@ jobs:
           java-version: '17'
           distribution: 'corretto'
           cache: 'maven'
-          server-id: ossrh
+          server-id: central
           server-username: OSSRH_USERNAME
           server-password: OSSRH_TOKEN
           gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
           gpg-passphrase: MAVEN_GPG_PASSPHRASE
 
       - name: Publish package to Maven Central
-        run: mvn deploy -P ossrh
+        run: mvn deploy -P central
         env:
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           OSSRH_TOKEN: ${{ secrets.OSSRH_TOKEN }}
