@@ -7,6 +7,7 @@ Provides Password Policy data as well as Realm attribute access to your Keycloak
 The Password Policy data is available in the `passwordPolicies` object.
 The following properties are available:
 - `length`: The minimum length of the password
+- `maxLength`: The maximum length of the password
 - `digits`: The minimum number of digits required in the password
 - `lowerCase`: The minimum number of lowercase characters required in the password
 - `upperCase`: The minimum number of uppercase characters required in the password
